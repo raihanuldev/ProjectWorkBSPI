@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c36;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+.clock {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ffcc00, #ff6699);
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
+    }
+    to {
+        box-shadow: 0 0 25px rgba(255, 102, 153, 0.8);
+    }
+}

@@ -1,27 +1,37 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #282c36;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-}
-.clock {
-    font-size: 3rem;
-    font-weight: bold;
-    background: linear-gradient(45deg, #ffcc00, #ff6699);
-    padding: 20px 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
-    animation: glow 1.5s infinite alternate;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Courier New', monospace;
 }
 
-@keyframes glow {
-    from {
-        box-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
-    }
-    to {
-        box-shadow: 0 0 25px rgba(255, 102, 153, 0.8);
-    }
+.led-clock {
+  background-color: #111;
+  padding: 40px 60px;
+  border: 10px solid #222;
+  border-radius: 20px;
+  box-shadow: 0 0 50px #0f0;
+  text-align: center;
+}
+
+#time {
+  font-size: 5rem;
+  color: #0f0;
+  text-shadow: 0 0 20px #0f0, 0 0 40px #0f0;
+  letter-spacing: 4px;
+}
+
+#date {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #0f0;
+  text-shadow: 0 0 10px #0f0;
+}
+.info{
+    color: white;
+    margin-bottom: 100px;
 }

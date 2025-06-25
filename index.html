@@ -1,57 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Clock</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #282c36;
-            color: #ffffff;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        .container {
-            padding: 20px;
-            border-radius: 10px;
-            /* background: linear-gradient(45deg, #ffcc00, #ff6699); */
-            box-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
-        }
-        .clock {
-            font-size: 3rem;
-            font-weight: bold;
-            padding: 20px;
-        }
-        footer {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: #ddd;
-        }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock Project</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <div class="container"> 
-        <div class="clock" id="clock"></div>
+    <div class="container">
+        <div class="info">
+            <h1>Digital Clock Project</h1>
+            <p><strong>Instructor:</strong> Amit Hagidak</p>
+            <p><strong>Team Leader:</strong> Rihanul Islam (789144)</p>
+            <p><strong>Team Members:</strong>Joynal abedin Hamim, Raihanul Alom, Shudip Barua</p>
+        </div>
+
+        <div class="led-clock">
+            <div id="time">00:00:00</div>
+            <div id="date">DD/MM/YYYY</div>
+        </div>
+
     </div>
-    <script>
-        function updateClock() {
-            const now = new Date();
-            let hours = now.getHours().toString().padStart(2, '0');
-            let minutes = now.getMinutes().toString().padStart(2, '0');
-            let seconds = now.getSeconds().toString().padStart(2, '0');
-            document.getElementById("clock").innerText = `${hours}:${minutes}:${seconds}`;
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
-    </script>
-    <footer>
-        <p>Contributors: Rihanul Islam, Raihanul Alom, Joynal Abedin Hamim, Shudip Barua</p>
-    </footer>
+
+    <script src="main.js"></script>
 </body>
+
 </html>
